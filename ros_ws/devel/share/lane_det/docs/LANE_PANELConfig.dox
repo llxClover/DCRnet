@@ -1,0 +1,8 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~revise_theta" : \b [double] revise_theta. min: -0.2, default: -0.01919, max: 0.2
+- \b "~revise_y" : \b [double] revise_y. min: -1.0, default: -0.35, max: 1.0
+- \b "~delta_scale" : \b [double] delta_scale. min: -10.0, default: 1.0, max: 10.0
+

@@ -1,0 +1,72 @@
+# 相机到主激光雷达的旋转
+CameraRotation:
+  rows: 3
+  cols: 3
+  dt: d
+  data: [0.0204, 0.0407, 0.999, -0.9997, -0.0126, 0.0209, 0.0134, -0.9991, 0.0405]
+
+# 相机到主激光雷达的平移
+CameraTranslation:
+  rows: 1
+  cols: 3
+  dt: d
+  data: [0.8653, 0.0097, -0.2937]
+
+# 相机的内参矩阵
+CameraMat:
+  rows: 3
+  cols: 3
+  dt: d
+  data: [1287.66627919880, 0, 0, 0, 1289.12595435650, 0, 930.237762093161, 494.543080384824, 1]
+
+# 相机的即便系数
+DistCoeff:
+  rows: 1
+  cols: 5
+  dt: d
+  data: [-0.442252227577658, 0.197789573006800, 0, 0, -0.0454751986419120]
+
+# 相机成像的图像大小
+ImageSize: [1920, 1080]
+
+# 相机的重投影误差
+MeanReprojectionError: 2.082e-01
+
+# 主激光雷达到车体后轴中心的外参矩阵
+Lidar:
+  Rotation: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+  Translation: [0.93, 0.0, 1.60]
+
+
+front_image_topic: "/video1/camera/compressed"
+
+lidar_topic: "/top/rslidar_points"
+
+lane_topic: "/lane_detection"
+
+localization_topic: "/rtk_localization"
+
+car_center_height: 0.36
+
+tusimple_row_anchor: [64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172, 176, 180, 184, 188, 192, 196, 200, 204, 208, 212, 216, 220, 224, 228, 232, 236, 240, 244, 248, 252, 256, 260, 264, 268, 272, 276, 280, 284]
+
+# 车道线数量,训练时候已经确定，设定几条，只能检测几条
+lane_num: 4
+# 骨干网络
+backbone: "18"
+# 数据集类型
+dataset: "myself"
+# 网格数
+griding_num: 100
+# 车道线的高度误差范围值
+lane_eps_value: 0.05
+# 自训练模型路径
+test_model: "/home/tsari/llx/Ultra-Fast-Lane-Detection/weights/ep093.pth"
+# 自定义测试路径
+data_root: "/home/tsari/llx/Ultra-Fast-Lane-Detection/data/my_tusimple_dataset/test_set/clips/2023-03-15-23-16-35" # 自定义测试路径
+# 保存检测结果图路径
+data_save: "/home/tsari/llx/Ultra-Fast-Lane-Detection/our_images/results" # 保存检测结果图路径
+# BEV 的保存路径
+plot_path: "/home/tsari/llx/Ultra-Fast-Lane-Detection/our_images/results/plot_lane"
+
+csv_path: "/home/tsari/llx/Ultra-Fast-Lane-Detection/our_images/results/lane_csv"

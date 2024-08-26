@@ -1,0 +1,8 @@
+prefix=/home/tsari/llx/Ultra-Fast-Lane-Detection/ros_ws/devel
+
+Name: lane_det
+Description: Description of lane_det
+Version: 0.0.0
+Cflags: -I/home/tsari/llx/Ultra-Fast-Lane-Detection/ros_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy sensor_msgs std_msgs message_runtime geometry_msgs

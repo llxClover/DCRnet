@@ -1,0 +1,9 @@
+\subsubsection usage Usage
+\verbatim
+<node name="lane_det" pkg="lane_det" type="lane_det">
+  <param name="revise_theta" type="double" value="-0.01919" />
+  <param name="revise_y" type="double" value="-0.35" />
+  <param name="delta_scale" type="double" value="1.0" />
+</node>
+\endverbatim
+
