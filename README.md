@@ -3,8 +3,8 @@
 1. Clone the project
 
    ```Shell
-   git clone ****
-   cd ***
+   git clone https://github.com/llxClover/DCRnet.git
+   cd DCRnet
    ```
 
 2. Create a conda virtual environment and activate it
